@@ -1,16 +1,16 @@
-#Factorial of a number using recursion
-def recur_factorial(n):
-  if n == 1:
-    return n
-  else:
-    return n * recur_factorial(n - 1)
+def linearSearchProduct(productList, targetProduct):
+  indices = []
+
+  for index, product in enumerate(productList):
+    if product == targetProduct:
+      indices.append(index)
+
+  return indices
 
 
-num = int(input("Enter a factorial number:"))
-#check if the number is negative
-if num < 0:
-  print("Sorry,factorial does not exist for negative numbers")
-elif num == 0:
-  print("The factorial of 0 is 1 ")
-else:
-  print("The factorial of", num, "is", recur_factorial(num))
+# Example usage:
+products = ["shoes", "boot", "loafer", "shoes", "sandal", "shoes"]
+target = "shoes"
+target2 = 'apple'
+result = linearSearchProduct(products, target)
+print(result)
